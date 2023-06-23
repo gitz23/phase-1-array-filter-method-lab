@@ -1,7 +1,38 @@
 // Code your solution here
-const drivers = ['Bobby', 'Sammy', 'Sally', 'Annette', 'Sarah', 'Bobby']
+const driversNameArr = ['Bobby', 'Sammy', 'Sally', 'Annette', 'Sarah', 'Bobby']
 
-function findMatching(array, name){
-    return drivers.filter(name => name  == "Bobby" && "bobby")
+function findMatching(driversNameArr, name){
+    //for(const element of array){
+    let filterDrivers =  driversNameArr.filter(driver => driver.toLowerCase() === name.toLowerCase())
+    return filterDrivers
 }
-findMatching(drivers, 'Bobby')
+
+// function fuzzyMatch(driversArr, name){
+// }
+
+
+const driversObjArr = [
+    {
+      name: 'Bobby',
+      hometown: 'Pittsburgh' },
+    {
+      name: 'Sammy',
+      hometown: 'New York' } ,
+    {
+      name: 'Sally',
+      hometown: 'Cleveland' },
+    {
+      name: 'Annette',
+      hometown: 'Los Angeles' },
+    {
+      name: 'Bobby',
+      hometown: 'Tampa Bay' }
+]
+
+function matchName(driversObjArr, name){
+    let objectName = driversObjArr.filter(obj => obj.name === name);
+    return objectName;
+}
+
+
+
